@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::pattern('foo', '[0-9a-zA-z]{3}');
+
+
+Route::get('/', function()
+{
+  $items = ['apple', 'banana', 'tomato'];
+  return view('welcome', ['items' => $items ]);
+});
+
+Route::get('/home', function()
+{
+  return 'Hello World home ';
+
 });
